@@ -1,0 +1,124 @@
+/* Contenedor principal de toda la página de login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa el 100% de la altura de la ventana del navegador */
+  width: 100vw;    /* Ocupa el 100% del ancho de la ventana del navegador */
+
+  background-image: url('/perros_gatos.jpg'); /* Tu imagen de fondo */
+  background-size: 100% 100%; /* O 'cover' si prefieres que no se distorsione pero se recorte */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white; /* Color del texto blanco */
+  font-family: 'Arial', sans-serif; /* Fuente del texto */
+  padding: 20px; /* Espaciado interno general */
+  box-sizing: border-box; /* Asegura que el padding no añada al tamaño total del elemento */
+}
+
+.header {
+  text-align: center; /* Centra el texto y las imágenes dentro del encabezado */
+  margin-bottom: 350px; /* Espacio debajo del encabezado */
+}
+
+/* Estilos para el logo de la huella */
+.paw-logo {
+  width: 60px; /* Ancho del logo, ajusta si es necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 10px; /* Espacio debajo del logo */
+}
+
+/* Estilos para el título principal "Huella Feliz" */
+h1 {
+  font-size: 2.5em; /* Tamaño de fuente grande */
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Estilos para el subtítulo "Más sonrisas..." */
+.subtitle {
+  font-size: 1em; /* Tamaño de fuente normal */
+  margin-top: 5px; /* Pequeño espacio encima */
+  color: rgba(255, 255, 255, 0.8); /* Blanco ligeramente transparente */
+}
+
+/* Estilos para la sección de la imagen grande (perro y gato) */
+.image-section {
+  margin-bottom: 30px; /* Espacio debajo de la imagen */
+}
+
+/* Estilos para la imagen del perro y gato */
+.pet-image {
+  max-width: 80%; /* Máximo 80% del ancho del contenedor para que sea responsive */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes ligeramente redondeados, opcional */
+}
+
+/* Estilos generales del formulario */
+form {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 300px; /* Pero con un ancho máximo para no ser demasiado grande en pantallas amplias */
+  margin-bottom: 20px; /* Espacio debajo del formulario */
+}
+
+/* Contenedor para cada grupo de input (label + input) */
+.input-group {
+  margin-bottom: 15px; /* Espacio entre cada grupo de input */
+}
+
+/* Estilos para las etiquetas (Usuario, Contraseña) */
+label {
+  display: block; /* Hace que la etiqueta ocupe su propia línea */
+  margin-bottom: 2px; /* Pequeño espacio debajo de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los campos de entrada de texto y contraseña */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Ocupa todo el ancho del input-group */
+  padding: 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco ligeramente transparente */
+  color: #333; /* Color de texto oscuro para el input */
+  box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
+}
+
+/* Estilos base para todos los botones */
+.btn {
+  display: block; /* Hace que el botón ocupe su propia línea */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin borde por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.1em; /* Tamaño de fuente ligeramente más grande */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+  margin-top: 15px; /* Espacio encima del botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilos para el botón principal ("Entrar") */
+.primary-btn {
+ border: 1px solid rgb(236, 240, 237); /* Borde blanco */
+
+  background-color: #010101; /* Color de fondo azul más claro */
+  color: white; /* Color del texto blanco */
+}
+
+.primary-btn:hover {
+  background-color: #040506; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+/* Estilos para el botón secundario ("Registrarse") */
+.secondary-btn {
+  background-color: rgb(35, 183, 99); /* Fondo transparente */
+  color: white; /* Color del texto blanco */
+  border: 1px solid rgb(236, 240, 237); /* Borde blanco */
+  margin-top: 0px; /* <-- ¡Este es el cambio para eliminar el margen! */
+}
+
+.secondary-btn:hover {
+  background-color: rgba(78, 73, 73, 0.1); /* Fondo blanco ligeramente transparente al pasar el ratón */
+}

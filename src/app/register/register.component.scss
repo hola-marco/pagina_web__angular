@@ -1,0 +1,100 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/assets/perros_gatos.jpg'); // Asegúrate de que esta ruta sea correcta
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 { // Asegúrate de que este selector sea específico si tienes otros h1
+  font-size: 2.5em;
+  margin: 0;
+  color: white; // Asegura que el color del texto del h1 sea blanco
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); // Opcional: sombra para que destaque
+}
+
+.header .subtitle { // Asegúrate de que este selector sea específico
+  font-size: 1em;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); // Opcional: sombra para que destaque
+}
+
+
+form {
+  width: 100%;
+  max-width: 350px; /* Un poco más ancho para los campos de Material */
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente para el formulario */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para que se vea elevado */
+  box-sizing: border-box;
+}
+
+/* Estilos para los campos de formulario de Material */
+.full-width-input {
+  width: 100%;
+  margin-bottom: 20px; /* Espacio entre campos */
+}
+
+/* Puedes personalizar los colores del texto de los campos de Material si es necesario */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #333; // Color del borde del outline
+}
+
+.mat-form-field-label {
+  color: #555 !important; // Color de la etiqueta flotante
+}
+
+.mat-input-element {
+  color: #333; // Color del texto dentro del input
+}
+
+/* Estilos para los botones de Material */
+.full-width-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  margin-top: 15px; /* Espacio entre el último campo y el botón de enviar */
+}
+
+.go-to-login-button {
+  margin-top: 10px; /* Espacio entre el botón de registrar y el de volver */
+}
+
+/* Ajustes de color para botones específicos si tu tema no los define así */
+/*
+.mat-raised-button.mat-primary {
+  background-color: #010101; // Color de fondo del botón principal
+  color: white;
+}
+
+.mat-raised-button.mat-primary:hover {
+  background-color: #040506;
+}
+
+.mat-stroked-button.mat-accent {
+  border-color: #010101; // Color del borde del botón secundario
+  color: #010101; // Color del texto del botón secundario
+  background-color: transparent;
+}
+
+.mat-stroked-button.mat-accent:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+*/

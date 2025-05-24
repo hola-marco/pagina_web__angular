@@ -1,0 +1,21 @@
+<div class="register-container">
+  <div class="header">
+    <h1>Registrarse en</h1>
+    <p class="subtitle">Huella Feliz</p>
+  </div>
+
+  <form (ngSubmit)="onRegisterSubmit()" #registerForm="ngForm">
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nuevo Usuario</mat-label>
+      <input matInput type="text" [(ngModel)]="newUsername" name="newUsername" required>
+      </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nueva Contraseña</mat-label>
+      <input matInput type="password" [(ngModel)]="newPassword" name="newPassword" required>
+      </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.form.valid" class="full-width-button">Registrarme</button>
+    <button mat-stroked-button color="accent" type="button" (click)="goToLogin()" class="full-width-button go-to-login-button">Volver al Login</button>
+  </form>
+</div>

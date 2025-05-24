@@ -1,0 +1,232 @@
+/* Contenedor principal de toda la página de servicios */
+.servicios-page-container {
+  position: relative; /* Esencial para que el 'background-overlay' se posicione correctamente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la ventana */
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total del elemento */
+  overflow: hidden; /* Evita que el contenido se desborde si hay animaciones fuera de los límites */
+
+  /* Estilo de la imagen de fondo */
+  background-image: url('/perros_gatos.jpg'); 
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene la imagen de fondo fija mientras se hace scroll */
+  background-repeat: no-repeat;
+}
+
+/* Capa de superposición para el efecto visual sobre la imagen de fondo */
+.background-overlay {
+  position: absolute; /* Se posiciona absolutamente dentro de .servicios-page-container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px); /* Aplica un efecto de desenfoque a lo que está detrás de este elemento */
+  z-index: 1; /* Asegura que el overlay esté por debajo del contenido principal */
+}
+
+/* Contenedor para todo el contenido visible (encabezado, título, grid, botones) */
+.content-wrapper {
+  position: relative; /* Esencial para que el contenido esté por encima del overlay */
+  z-index: 2; /* Asegura que el contenido esté encima del overlay */
+  width: 100%;
+  max-width: 1000px; /* Ancho máximo para el contenido para centrarlo y controlarlo */
+  padding: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sección del encabezado (Veterinaria Huella Feliz y barra de búsqueda) */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(37, 165, 12, 0.9); /* Fondo blanco semi-transparente para el encabezado */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333; /* Color oscuro para el texto del encabezado */
+  margin-bottom: 40px;
+}
+
+.header-content {
+  text-align: left;
+}
+
+.main-title {
+  font-size: 2.8em; /* Tamaño de fuente grande para el título principal */
+  margin: 0;
+  font-weight: bold;
+  color: #0a0a0a; /* Color que resalte, como un azul brillante */
+}
+
+.company-name {
+  font-size: 1.6em; /* Tamaño para el nombre de la compañía */
+  margin: 0px 0 0;
+  color: #f7f1f1;
+}
+
+.search-bar input {
+  padding: 10px 20px; /* Espaciado interno para el campo de búsqueda */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 25px; /* Bordes muy redondeados para el campo de búsqueda */
+  outline: none; /* Quita el contorno al enfocar */
+  font-size: 1em;
+  background-color: white;
+  color: #fdf6f6;
+  width: 200px; /* Ancho fijo para el campo de búsqueda */
+  box-shadow: inset 0 1px 3px rgba(253, 247, 247, 0.1); /* Sombra interna para un efecto de profundidad */
+}
+
+/* Título de la sección "Nuestros Servicios" */
+.section-title {
+  font-size: 2.5em; /* Tamaño de fuente grande */
+  color: rgb(248, 240, 240); /* Color blanco para que contraste con el overlay de fondo */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para que se lea mejor sobre el fondo */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Contenedor de la cuadrícula que organiza las tarjetas de servicio */
+.services-grid {
+  display: grid;
+  /* Define un grid responsivo: auto-fit intentará ajustar columnas, minmax define tamaño */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tarjetas de al menos 280px de ancho */
+  gap: 30px; /* Espacio entre las tarjetas de la cuadrícula */
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* Estilo para cada tarjeta individual de servicio */
+.service-card {
+  background-color: rgba(255, 255, 255, 0.98); /* Fondo casi blanco con un toque de transparencia */
+  border-radius: 20px; /* Bordes muy redondeados */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* Sombra pronunciada para efecto 3D */
+  overflow: hidden; /* Asegura que las esquinas de la imagen se redondeen */
+  text-align: center;
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Animación suave al pasar el ratón */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el espacio para que el nombre quede abajo */
+  align-items: center;
+  padding-bottom: 20px; /* Espacio en la parte inferior de la tarjeta */
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02); /* Se levanta y agranda ligeramente */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); /* Sombra más dramática */
+}
+
+/* Estilo para la imagen dentro de cada tarjeta de servicio */
+.service-image {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarse */
+  border-bottom: 2px solid #f0f0f0; /* Borde sutil debajo de la imagen */
+}
+
+/* Estilo para el nombre del servicio dentro de la tarjeta */
+.service-name {
+  font-size: 1.4em; /* Texto del nombre más grande */
+  font-weight: bold;
+  color: #333;
+  margin: 20px 15px 0; /* Espacio alrededor del nombre */
+}
+
+/* Contenedor de botones en el pie de página */
+.footer-buttons {
+  margin-top: 30px;
+}
+
+/* Estilo para el botón "Volver al Login" */
+.back-to-login-btn {
+  background-color: #007bff; /* Color azul primario */
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Más padding */
+  border-radius: 8px; /* Más redondeado */
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación al pasar el ratón */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Sombra para el botón */
+}
+
+.back-to-login-btn:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Ligero levantamiento */
+}
+
+/* Media Queries para hacer el diseño responsivo en diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2-3 columnas */
+    gap: 20px;
+  }
+  .header-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  .search-bar {
+    margin-top: 15px;
+  }
+  .main-title {
+    font-size: 2.2em;
+  }
+  .company-name {
+    font-size: 1.3em;
+  }
+  .section-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 2 columnas o 1 si es muy pequeño */
+    gap: 15px;
+  }
+  .service-image {
+    height: 160px;
+  }
+  .service-name {
+    font-size: 1.1em;
+  }
+  .main-title {
+    font-size: 1.8em;
+  }
+  .company-name {
+    font-size: 1.1em;
+  }
+  .section-title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Una sola columna en móviles muy pequeños */
+  }
+  .service-image {
+    height: 140px;
+  }
+  .service-name {
+    font-size: 1em;
+  }
+  .search-bar input {
+    width: 90%; /* Ocupa más ancho en móviles */
+  }
+  .header-section {
+    padding: 10px 15px;
+  }
+  .content-wrapper {
+    padding: 10px;
+  }
+}
