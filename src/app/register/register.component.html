@@ -15,7 +15,8 @@
       <input matInput type="password" [(ngModel)]="newPassword" name="newPassword" required>
       </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.form.valid" class="full-width-button">Registrarme</button>
-    <button mat-stroked-button color="accent" type="button" (click)="goToLogin()" class="full-width-button go-to-login-button">Volver al Login</button>
+    <button mat-raised-button type="submit" [disabled]="!registerForm.form.valid" class="full-width-button custom-register-color">Registrarme</button>
+
+    <button mat-stroked-button type="button" (click)="goToLogin()" class="full-width-button go-to-login-button custom-login-color">Volver al Login</button>
   </form>
 </div>

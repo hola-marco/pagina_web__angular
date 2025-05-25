@@ -46,7 +46,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgba(37, 165, 12, 0.9); /* Fondo blanco semi-transparente para el encabezado */
+  background-color: rgba(150, 167, 147, 0.9); /* Fondo blanco semi-transparente para el encabezado */
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -73,7 +73,7 @@
 
 .search-bar input {
   padding: 10px 20px; /* Espaciado interno para el campo de búsqueda */
-  border: 1px solid #ccc; /* Borde sutil */
+  border: 1px solid #efecec; /* Borde sutil */
   border-radius: 25px; /* Bordes muy redondeados para el campo de búsqueda */
   outline: none; /* Quita el contorno al enfocar */
   font-size: 1em;
@@ -147,7 +147,7 @@
 
 /* Estilo para el botón "Volver al Login" */
 .back-to-login-btn {
-  background-color: #007bff; /* Color azul primario */
+  background-color: #109019; /* Color azul primario */
   color: white;
   border: none;
   padding: 12px 25px; /* Más padding */
@@ -159,7 +159,7 @@
 }
 
 .back-to-login-btn:hover {
-  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  background-color: #00b35c; /* Color más oscuro al pasar el ratón */
   transform: translateY(-2px); /* Ligero levantamiento */
 }
 
